@@ -25,7 +25,7 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: build-result-dir
+          name: build-results
           path: build-results.tar.gz
 
   release:
@@ -35,7 +35,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: build-results
-          path: build/
+          path: dist/
       - name: Create Release
         uses: actions/create-release@v1
         with:
