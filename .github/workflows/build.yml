@@ -43,7 +43,7 @@ jobs:
           release_name: Release v1.0.0
           draft: false
           prerelease: false 
-          asset_path: build/build-results.tar.gz
+          asset_path: dist/build-results.tar.gz
           asset_name: build-results.tar.gz
           asset_content_type: application/gzip
         env:
