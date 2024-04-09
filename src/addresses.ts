@@ -48,7 +48,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.POLYGON]: '0x9e5A52f57b3038F1B8EeE45F28b3C1967e22799C',
   [ChainId.CELO]: '0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f',
   [ChainId.BLAST]: '0x5C346464d33F90bABaf70dB6388507CC889C1070',
-  [ChainId.COSTON2]: '0x5C346464d33F90bABaf70dB6388507CC889C1070'
+  [ChainId.COSTON2]: '0xAf2977827a72e3CfE18104b0EDAF61Dd0689cd31'
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
@@ -64,7 +64,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.BNB]: '0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24',
   [ChainId.POLYGON]: '0xedf6066a2b290c185783862c7f4776a2c8077ad1',
   [ChainId.BLAST]: '0xBB66Eb1c5e875933D44DAe661dbD80e5D9B03035',
-  [ChainId.COSTON2]: '0xBB66Eb1c5e875933D44DAe661dbD80e5D9B03035'
+  [ChainId.COSTON2]: '0x12f523A693cC1614b8a04f62362f0F2c1b15dBA7'
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
@@ -293,6 +293,18 @@ export const MULTICALL_ADDRESSES: AddressMap = {
   }, {})
 }
 
+export const OracleSwapVoter :AddressMap = {
+  [ChainId.COSTON2]: '0x72E374332EBdcae18CDa5D37Ec02ceD619812c49',
+}
+
+export const OSLPManager:AddressMap = {
+  [ChainId.COSTON2]: '0x94a61861d5e8154B24095E619Bf69e457F373586',
+}
+
+export const SuperfarmMultiRewardManager :AddressMap = {
+  [ChainId.COSTON2]: '0xeA2aCE79592BFe28e2b57810DcF668037c7d8a8b',
+}
+
 /**
  * The oldest V0 governance address
  */
@@ -310,14 +322,14 @@ export const GOVERNANCE_ALPHA_V1_ADDRESSES: AddressMap = {
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
   [ChainId.MAINNET]: '0x408ED6354d4973f66138C91495F2f2FCbd8724C3',
-  [ChainId.COSTON2]: '0x408ED6354d4973f66138C91495F2f2FCbd8724C3',
+  [ChainId.COSTON2]: '0x8Ad2D1A537fe16d1C619fD877a26FA584798107f',
 }
 
 export const TIMELOCK_ADDRESSES: AddressMap = {
   [ChainId.MAINNET]: '0x1a9C8182C09F50C8318d769245beA52c32BE35BC',
   [ChainId.GOERLI]: '0x1a9C8182C09F50C8318d769245beA52c32BE35BC',
   [ChainId.SEPOLIA]: '0x1a9C8182C09F50C8318d769245beA52c32BE35BC',
-  [ChainId.COSTON2]: '0x408ED6354d4973f66138C91495F2f2FCbd8724C3',
+  [ChainId.COSTON2]: '0x94ed40CEE9b8752bfaD93F7F79D3E4Bc1b5fC78b',
 }
 
 export const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap = {

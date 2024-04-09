@@ -61,8 +61,5 @@ export enum NativeCurrencyName {
   BNB = 'BNB',
   AVAX = 'AVAX',
   ROOTSTOCK = 'RBTC',
-  SONGBIRD = 'SGB',
-  FLARE = 'FLR',
-  COSTON = 'CFLR',
   COSTON2 = 'C2FLR',
 }
