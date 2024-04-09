@@ -23,7 +23,7 @@ jobs:
         run: |
           tar -czvf build-results.tar.gz dist/
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: build-results
           path: build-results.tar.gz
