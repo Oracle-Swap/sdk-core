@@ -37,6 +37,6 @@ jobs:
         with:
           tag_name: v1.0.3
           release_name: Release v1.0.3
-          files: dist
+          files: dist/
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
