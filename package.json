@@ -1,7 +1,7 @@
 {
   "name": "@oracleswap/sdk-core",
   "license": "MIT",
-  "version": "4.2.0",
+  "version": "1.0.0",
   "description": "⚒️ An SDK for building applications on top of OracleSwap V2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
