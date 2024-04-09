@@ -20,28 +20,26 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn build
 
-      - name: Build project
-        run: |
-          zip --junk-paths my-artifact README.md
+      - uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist/
 
-      - name: Create Release
-        id: create_release
-        if: success()  # Only create a release if the build succeeds
-        uses: actions/create-release@v1
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
         with:
-          tag_name: v1.0.1  # Specify the release tag
-          release_name: Release v1.0.1
-          draft: false
-          prerelease: false
-          files: 
+          name: dist
+          path: dist
+      - name: Get the version tag
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      - uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          release_name: Release ${{ steps.get_version.outputs.VERSION }}
+          files: dist/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Upload Release Asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist
-          asset_name: dist.zip
-          asset_content_type: application/zip
