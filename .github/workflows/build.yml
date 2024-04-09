@@ -29,10 +29,11 @@ jobs:
         if: success()  # Only create a release if the build succeeds
         uses: actions/create-release@v1
         with:
-          tag_name: v1.0.0  # Specify the release tag
-          release_name: Release v1.0.0
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+          files: 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload Release Asset
