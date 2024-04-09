@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist/
@@ -33,10 +33,10 @@ jobs:
         with:
           name: dist
           path: dist
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.2
-          release_name: Release v1.0.2
-          files: dist/**
+          tag_name: v1.0.3
+          release_name: Release v1.0.3
+          files: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
