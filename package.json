@@ -12,7 +12,8 @@
   "keywords": [
     "oracleswap",
     "oracleswap-v2",
-    "ethereum"
+    "songbird",
+    "flare"
   ],
   "module": "dist/sdk-core.esm.js",
   "scripts": {

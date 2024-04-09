@@ -1,0 +1,38 @@
+name: Build and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+      - name: Install dependencies
+      run: npm install
+
+      - name: Build the code
+        run: npm run build
+
+      # Add your build steps here (e.g., compile, test, lint)
+
+      - name: Create Release
+        if: success()  # Only create a release if the build succeeds
+        uses: actions/create-release@v1
+        with:
+          tag_name: v1.0.0  # Specify the release tag
+          release_name: Release v1.0.0
+          body: Automated release for successful build
+          draft: false
+          prerelease: false
+          files: ./dist/*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
