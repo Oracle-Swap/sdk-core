@@ -18,8 +18,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        run: yarn build
+        run: yarn install --frozen-lockfile && yarn build
 
       - name: Create Release
         if: success()  # Only create a release if the build succeeds
