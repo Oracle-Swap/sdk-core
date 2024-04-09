@@ -19,11 +19,14 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn build
+      - name: Archive build results
+        run: |
+          tar -czvf build-results.tar.gz dist/
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v2
         with:
-          name: dist
-          path: dist/
+          name: build-result-dir
+          path: build-results.tar.gz
 
   release:
     needs: build
@@ -31,12 +34,17 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: dist
-          path: dist
-      - uses: softprops/action-gh-release@v2
+          name: build-results
+          path: build/
+      - name: Create Release
+        uses: actions/create-release@v1
         with:
           tag_name: v1.0.0
           release_name: Release v1.0.0
-          files: dist/**
+          draft: false
+          prerelease: false 
+          asset_path: build/build-results.tar.gz
+          asset_name: build-results.tar.gz
+          asset_content_type: application/gzip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
