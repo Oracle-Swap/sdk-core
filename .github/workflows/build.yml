@@ -18,20 +18,29 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: yarn install --frozen-lockfile && yarn build
-      
+        run: yarn install --frozen-lockfile && yarn build      
+
+      - name: Make a temp holder
+        run: mkdir temp_dist
+
       - name: Copy package.json files
-        run: cp -r package.json dist/
+        run: cp -r package.json temp_dist/
 
       - name: Copy readme.md files
-        run: cp -r README.md dist/
+        run: cp -r README.md temp_dist/
+
+      - name: Copy readme.md files
+        run: cp -r LICENSE temp_dist/
+
+      - name: Copy readme.md files
+        run: cp -r dist temp_dist/
 
       - name: Publish new branch
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: temp_dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout gh-pages branch
         uses: actions/checkout@v2
@@ -40,8 +49,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with: 
-          tag_name: v1.0.2
-          release_name: Release v1.0.2
+          tag_name: v1.0.3
+          release_name: Release v1.0.3
           draft: false
           prerelease: false
           target_commitish: gh-pages
