@@ -24,11 +24,11 @@ jobs:
         run: cp -r package.json dist/
 
       - name: Copy readme.md files
-        run: cp -r readme.md dist/
+        run: cp -r README.md dist/
 
       - name: Build project 
         run: zip -r dist.zip dist/
-        
+
       - name: Create new branch for release
         run: |
           git switch release-sdk-core
