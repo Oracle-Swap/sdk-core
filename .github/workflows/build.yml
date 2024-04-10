@@ -19,14 +19,16 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn build
-      - name: Archive build results
-        run: |
-          tar -czvf build-results.tar.gz dist/**
+      # - name: Archive build results
+      #   run: |
+      #     tar -czvf build-results.tar.gz dist/**
+      - name: Copy packaage.json file 
+        run: cp package.json dist/
 
       - uses: actions/upload-artifact@v4
         with:
           name: build-results
-          path: build-results.tar.gz
+          path: dist/*
 
   release:
     needs: build
@@ -42,9 +44,6 @@ jobs:
           tag_name: v1.0.1
           release_name: Release v1.0.1
           draft: false
-          prerelease: false 
-          asset_path: dist/build-results.tar.gz
-          asset_name: build-results.tar.gz
-          asset_content_type: application/gzip
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
