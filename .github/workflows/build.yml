@@ -33,9 +33,8 @@ jobs:
           BRANCH: gh-pages
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v2
         with:
           ref: 'gh-pages'
 
