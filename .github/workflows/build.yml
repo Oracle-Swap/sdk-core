@@ -34,7 +34,7 @@ jobs:
           git checkout -b release-sdk-core
 
       - name: Unzip dist archive
-        run: unzip dist.zip
+        run: unzip -o dist.zip -d .
 
       - name: Commit and push dist as main source code
         run: |
