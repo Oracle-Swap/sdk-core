@@ -26,24 +26,17 @@ jobs:
       - name: Copy readme.md files
         run: cp -r README.md dist/
 
-      - name: Build project 
-        run: zip -r dist.zip dist/
+      - name: Publish new branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create new branch for release
+      - name: Switch to gh-pages branch
         run: |
-          git config --global user.email "dev753951789@gmail.com"
-          git config --global user.name "workwithhim"
-          git checkout -b release-sdk-core
-          git pull origin release-sdk-core
-
-      - name: Unzip dist archive
-        run: unzip -o dist.zip -d .
-
-      - name: Commit and push dist as main source code
-        run: |
-          git add .
-          git commit -m "v1.0.0"
-          git push -u origin release-sdk-core
+          git checkout -b gh-pages
 
       - name: Create Release
         id: create_release
@@ -55,4 +48,3 @@ jobs:
           release_name: Release v1.0.0
           draft: false
           prerelease: false
-          target_commitish: release-sdk-core
