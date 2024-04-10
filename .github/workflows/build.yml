@@ -21,7 +21,7 @@ jobs:
         run: yarn install --frozen-lockfile && yarn build
       - name: Archive build results
         run: |
-          tar -czvf build-results.tar.gz dist/
+          tar -czvf build-results.tar.gz dist/**
 
       - uses: actions/upload-artifact@v4
         with:
