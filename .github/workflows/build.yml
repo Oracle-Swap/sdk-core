@@ -31,7 +31,9 @@ jobs:
 
       - name: Create new branch for release
         run: |
-          git switch release-sdk-core
+          git checkout -b release-sdk-core
+          git push --set-upstream origin release-sdk-core
+          
       - name: Unzip dist archive
         run: unzip dist.zip -d .
 
