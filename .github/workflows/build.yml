@@ -32,8 +32,6 @@ jobs:
       - name: Create new branch for release
         run: |
           git checkout -b release-sdk-core
-          git config pull.ff only
-          git pull origin release-sdk-core
 
       - name: Unzip dist archive
         run: unzip dist.zip -d .
