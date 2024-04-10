@@ -22,8 +22,8 @@ jobs:
       # - name: Archive build results
       #   run: |
       #     tar -czvf build-results.tar.gz dist/**
-      - name: Copy packaage.json file 
-        run: cp package.json dist/
+      - name: Copy some file files to temp_dist dir 
+        run: mk temp_dist && cp dist/* temp_dist && cp package.json dist/
 
       # - uses: actions/upload-artifact@v2
       #   with:
@@ -40,7 +40,7 @@ jobs:
           release_name: Release v1.0.1
           draft: false
           prerelease: false
-          files: dist/*
+          files: temp_dist/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # - name: Upload Release Asset
