@@ -31,6 +31,8 @@ jobs:
 
       - name: Create new branch for release
         run: |
+          git config --global user.email "dev753951789@gmail.com"
+          git config --global user.name "workwithhim"
           git checkout -b release-sdk-core
 
       - name: Unzip dist archive
