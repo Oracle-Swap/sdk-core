@@ -50,6 +50,10 @@ jobs:
           path: temp_dist
       - uses: softprops/action-gh-release@v1
         with:
+          tag_name: v1.0.0
+          release_name: Release v1.0.0
+          draft: false
+          prerelease: false
           files: temp_dist/**
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
