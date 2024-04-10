@@ -35,7 +35,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: upload
+          name: uploaded
           path: temp_dist/*
   release:
     needs: build
@@ -46,7 +46,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v2
         with:
-          name: download
+          name: uploaded
           path: temp_dist
       - uses: softprops/action-gh-release@v1
         with:
