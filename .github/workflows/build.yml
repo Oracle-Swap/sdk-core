@@ -19,19 +19,10 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn build
-      # - name: Archive build results
-      #   run: |
-      #     tar -czvf build-results.tar.gz dist/**
-      - name: Copy some file files to temp_dist dir 
-        run: mkdir temp_dist && cp dist/* temp_dist && cp package.json dist/
 
-      # - uses: actions/upload-artifact@v2
-      #   with:
-      #     name: build-results
-      #     path: dist/*
-      # - uses: actions/download-artifact@v4
-      #   with:
-      #     name: build-results
+      - name: Copy package.json file to dir 
+        run: cp package.json dist/
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -40,43 +31,14 @@ jobs:
           release_name: Release v1.0.1
           draft: false
           prerelease: false
-          files: temp_dist/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Upload Release Asset
-      #   uses: actions/upload-release-asset@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-      #     asset_path: ./dist
-      #     asset_name: build-results.zip
-      #     asset_content_type: application/zip
-
-  # release:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/download-artifact@v4
-  #       with:
-  #         name: build-results
-  #         path: build-results
-  #     - name: Create Release
-  #       id: create_release
-  #       uses: actions/create-release@v1
-  #       with:
-  #         tag_name: v1.0.1
-  #         release_name: Release v1.0.1
-  #         draft: false
-  #         prerelease: false
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #     - name: Upload Release Asset
-  #       uses: actions/upload-release-asset@v1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         upload_url: ${{ steps.create_release.outputs.upload_url }}
-  #         asset_path: ./dist
-  #         asset_name: dist.zip
-  #         asset_content_type: application/zip
+      - name: Upload Release Asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/*
+          asset_name: dist
+          asset_content_type: application/zip
