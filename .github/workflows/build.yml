@@ -42,7 +42,7 @@ jobs:
         run: |
           git add .
           git commit -m "v1.0.0"
-          git push origin release-sdk-core
+          git push -u origin release-sdk-core
 
       - name: Create Release
         id: create_release
