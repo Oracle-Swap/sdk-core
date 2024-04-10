@@ -23,7 +23,7 @@ jobs:
       #   run: |
       #     tar -czvf build-results.tar.gz dist/**
       - name: Copy some file files to temp_dist dir 
-        run: mk temp_dist && cp dist/* temp_dist && cp package.json dist/
+        run: mkdir temp_dist && cp dist/* temp_dist && cp package.json dist/
 
       # - uses: actions/upload-artifact@v2
       #   with:
