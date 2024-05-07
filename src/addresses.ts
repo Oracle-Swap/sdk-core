@@ -71,7 +71,7 @@ const SEPOLIA_ADDRESSES: ChainAddresses = {
 }
 
 const COSTON2_ADDRESSES: ChainAddresses = {
-  multicallAddress: "0x35060f7803eF7763b77E4EF0082bc0bCf2654154"
+  multicallAddress: "0x411E2E15390639Cd553508907329Ea95F23D9Bf0"
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
