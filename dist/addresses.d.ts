@@ -22,7 +22,7 @@ export declare const V2_FACTORY_ADDRESSES: AddressMap;
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
  */
-export declare const V2_ROUTER_ADDRESS = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
+export declare const V2_ROUTER_ADDRESS = "0x12f523A693cC1614b8a04f62362f0F2c1b15dBA7";
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export declare const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>;
 export declare const V3_CORE_FACTORY_ADDRESSES: AddressMap;
@@ -44,8 +44,6 @@ export declare const GOVERNANCE_ALPHA_V1_ADDRESSES: AddressMap;
  */
 export declare const GOVERNANCE_BRAVO_ADDRESSES: AddressMap;
 export declare const TIMELOCK_ADDRESSES: AddressMap;
-export declare const MERKLE_DISTRIBUTOR_ADDRESS: AddressMap;
-export declare const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap;
 export declare const QUOTER_ADDRESSES: AddressMap;
 export declare const NONFUNGIBLE_POSITION_MANAGER_ADDRESSES: AddressMap;
 export declare const ENS_REGISTRAR_ADDRESSES: AddressMap;
