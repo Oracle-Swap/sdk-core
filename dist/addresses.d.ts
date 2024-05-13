@@ -22,7 +22,7 @@ export declare const V2_FACTORY_ADDRESSES: AddressMap;
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
  */
-export declare const V2_ROUTER_ADDRESS = "0x12f523A693cC1614b8a04f62362f0F2c1b15dBA7";
+export declare const V2_ROUTER_ADDRESS = "0xe551A850133Ae4bCbF069927940296c1428A7194";
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export declare const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>;
 export declare const V3_CORE_FACTORY_ADDRESSES: AddressMap;
