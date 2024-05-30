@@ -45,6 +45,14 @@ const COSTON2_ADDRESSES: ChainAddresses = {
   multicallAddress: "0x411E2E15390639Cd553508907329Ea95F23D9Bf0"
 }
 
+export const PERMIT2_ADDRESS:AddressMap = {
+  [ChainId.COSTON2]: "0x3CE3deF8d48d0D620061e5F0330a742B28B5945e",
+}
+
+export const UNIVERSAL_ROUTER_ADDRESS:AddressMap = {
+  [ChainId.COSTON2]: "0x04F886Aed8B7Fc774535E6DEcaaFd3F2B63BB653",
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.COSTON2]: COSTON2_ADDRESSES,
 }
