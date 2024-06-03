@@ -50,6 +50,29 @@ var ChainId;
 
 (function (ChainId) {
   ChainId[ChainId["COSTON2"] = 114] = "COSTON2";
+  ChainId[ChainId["MAINNET"] = 1] = "MAINNET";
+  ChainId[ChainId["GOERLI"] = 5] = "GOERLI";
+  ChainId[ChainId["SEPOLIA"] = 11155111] = "SEPOLIA";
+  ChainId[ChainId["OPTIMISM"] = 10] = "OPTIMISM";
+  ChainId[ChainId["OPTIMISM_GOERLI"] = 420] = "OPTIMISM_GOERLI";
+  ChainId[ChainId["OPTIMISM_SEPOLIA"] = 11155420] = "OPTIMISM_SEPOLIA";
+  ChainId[ChainId["ARBITRUM_ONE"] = 42161] = "ARBITRUM_ONE";
+  ChainId[ChainId["ARBITRUM_GOERLI"] = 421613] = "ARBITRUM_GOERLI";
+  ChainId[ChainId["ARBITRUM_SEPOLIA"] = 421614] = "ARBITRUM_SEPOLIA";
+  ChainId[ChainId["POLYGON"] = 137] = "POLYGON";
+  ChainId[ChainId["POLYGON_MUMBAI"] = 80001] = "POLYGON_MUMBAI";
+  ChainId[ChainId["CELO"] = 42220] = "CELO";
+  ChainId[ChainId["CELO_ALFAJORES"] = 44787] = "CELO_ALFAJORES";
+  ChainId[ChainId["GNOSIS"] = 100] = "GNOSIS";
+  ChainId[ChainId["MOONBEAM"] = 1284] = "MOONBEAM";
+  ChainId[ChainId["BNB"] = 56] = "BNB";
+  ChainId[ChainId["AVALANCHE"] = 43114] = "AVALANCHE";
+  ChainId[ChainId["BASE_GOERLI"] = 84531] = "BASE_GOERLI";
+  ChainId[ChainId["BASE"] = 8453] = "BASE";
+  ChainId[ChainId["ZORA"] = 7777777] = "ZORA";
+  ChainId[ChainId["ZORA_SEPOLIA"] = 999999999] = "ZORA_SEPOLIA";
+  ChainId[ChainId["ROOTSTOCK"] = 30] = "ROOTSTOCK";
+  ChainId[ChainId["BLAST"] = 81457] = "BLAST";
 })(ChainId || (ChainId = {}));
 
 var SUPPORTED_CHAINS = [ChainId.COSTON2];
