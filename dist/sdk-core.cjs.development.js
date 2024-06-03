@@ -630,6 +630,7 @@ var BaseCurrency =
  * @param name of the currency
  */
 function BaseCurrency(chainId, decimals, symbol, name) {
+  console.log("sdk-core/chainId: ", chainId, symbol, name);
   !Number.isSafeInteger(chainId) ?  invariant(false, 'CHAIN_ID')  : void 0;
   !(decimals >= 0 && decimals < 255 && Number.isInteger(decimals)) ?  invariant(false, 'DECIMALS')  : void 0;
   this.chainId = chainId;
