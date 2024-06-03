@@ -24,8 +24,10 @@ export declare const V2_FACTORY_ADDRESSES: AddressMap;
  */
 export declare const V2_ROUTER_ADDRESS = "0xe551A850133Ae4bCbF069927940296c1428A7194";
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
-export declare const PERMIT2_ADDRESS: AddressMap;
-export declare const UNIVERSAL_ROUTER_ADDRESS: AddressMap;
+export declare const PERMIT2_ADDRESS = "0x3CE3deF8d48d0D620061e5F0330a742B28B5945e";
+export declare const PERMIT2_ADDRESS_MAP: AddressMap;
+export declare const UNIVERSAL_ROUTER: AddressMap;
+export declare const UNIVERSAL_ROUTER_ADDRESS: (chainId: number) => string;
 export declare const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>;
 export declare const V3_CORE_FACTORY_ADDRESSES: AddressMap;
 export declare const V3_MIGRATOR_ADDRESSES: AddressMap;
