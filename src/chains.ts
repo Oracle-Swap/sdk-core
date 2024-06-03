@@ -26,7 +26,28 @@ export enum ChainId {
 }
 
 export const SUPPORTED_CHAINS = [
-  ChainId.COSTON2
+  ChainId.COSTON2,
+  ChainId.MAINNET,
+  ChainId.OPTIMISM,
+  ChainId.OPTIMISM_GOERLI,
+  ChainId.OPTIMISM_SEPOLIA,
+  ChainId.ARBITRUM_ONE,
+  ChainId.ARBITRUM_GOERLI,
+  ChainId.ARBITRUM_SEPOLIA,
+  ChainId.POLYGON,
+  ChainId.POLYGON_MUMBAI,
+  ChainId.GOERLI,
+  ChainId.SEPOLIA,
+  ChainId.CELO_ALFAJORES,
+  ChainId.CELO,
+  ChainId.BNB,
+  ChainId.AVALANCHE,
+  ChainId.BASE,
+  ChainId.BASE_GOERLI,
+  ChainId.ZORA,
+  ChainId.ZORA_SEPOLIA,
+  ChainId.ROOTSTOCK,
+  ChainId.BLAST
 ] as const
 export type SupportedChainsType = typeof SUPPORTED_CHAINS[number]
 
