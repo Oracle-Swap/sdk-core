@@ -25,8 +25,6 @@ export declare const V2_ROUTER_ADDRESS = "0xe551A850133Ae4bCbF069927940296c1428A
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export declare const PERMIT2_ADDRESS = "0x3CE3deF8d48d0D620061e5F0330a742B28B5945e";
 export declare const PERMIT2_ADDRESS_MAP: AddressMap;
-export declare const UNIVERSAL_ROUTER: AddressMap;
-export declare const UNIVERSAL_ROUTER_ADDRESS: (chainId: number) => string;
 export declare const CHAIN_TO_ADDRESSES_MAP: Record<number, ChainAddresses>;
 export declare const V3_CORE_FACTORY_ADDRESSES: AddressMap;
 export declare const V3_MIGRATOR_ADDRESSES: AddressMap;
@@ -34,6 +32,11 @@ export declare const MULTICALL_ADDRESSES: AddressMap;
 export declare const OracleSwapVoter: AddressMap;
 export declare const OSLPManager: AddressMap;
 export declare const SuperfarmMultiRewardManager: AddressMap;
+export declare const FTSORewardManager: AddressMap;
+export declare const FTSOManager: AddressMap;
+export declare const ClaimSetupManager: AddressMap;
+export declare const DistributionToDelegators: AddressMap;
+export declare const INIT_CODE_HASH: AddressMap;
 /**
  * The oldest V0 governance address
  */
@@ -53,5 +56,4 @@ export declare const ENS_REGISTRAR_ADDRESSES: AddressMap;
 export declare const SOCKS_CONTROLLER_ADDRESSES: AddressMap;
 export declare const TICK_LENS_ADDRESSES: AddressMap;
 export declare const MIXED_ROUTE_QUOTER_V1_ADDRESSES: AddressMap;
-export declare const SWAP_ROUTER_02_ADDRESSES: (chainId: number) => string;
 export {};
