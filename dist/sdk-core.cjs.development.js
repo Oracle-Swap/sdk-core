@@ -89,7 +89,7 @@ var SUPPORTED_CHAINS = [exports.ChainId.COSTON2];
   NativeCurrencyName["SONGBIRD"] = "SGB";
 })(exports.NativeCurrencyName || (exports.NativeCurrencyName = {}));
 
-var _V2_FACTORY_ADDRESSES, _V2_ROUTER_ADDRESSES, _PERMIT2_ADDRESS_MAP, _UNIVERSAL_ROUTER, _CHAIN_TO_ADDRESSES_M, _OracleSwapVoter, _OSLPManager, _SuperfarmMultiReward, _FTSORewardManager, _FTSOManager, _ClaimSetupManager, _DistributionToDelega, _INIT_CODE_HASH, _GOVERNANCE_BRAVO_ADD, _TIMELOCK_ADDRESSES;
+var _V2_FACTORY_ADDRESSES, _V2_ROUTER_ADDRESSES, _PERMIT2_ADDRESS_MAP, _UNIVERSAL_ROUTER, _CHAIN_TO_ADDRESSES_M, _OracleSwapVoter, _OSLPManager, _SuperfarmMultiReward, _FTSORewardManager, _FTSOManager, _ClaimSetupManager, _DistributionToDelega, _FTSORegistry, _INIT_CODE_HASH, _GOVERNANCE_BRAVO_ADD, _TIMELOCK_ADDRESSES;
 var DEFAULT_NETWORKS = [exports.ChainId.COSTON2];
 
 function constructSameAddressMap(address, additionalNetworks) {
@@ -310,6 +310,7 @@ var FTSORewardManager = (_FTSORewardManager = {}, _FTSORewardManager[exports.Cha
 var FTSOManager = (_FTSOManager = {}, _FTSOManager[exports.ChainId.COSTON2] = '0x4F52e61907B0ED9f26b88F16B2510a4CA524d6d0', _FTSOManager[exports.ChainId.FLARE] = '0x2E99a4543F9ea708Cf8CCaC447515e61706D9DE9', _FTSOManager[exports.ChainId.SONGBIRD] = '0x7A6B15E17b7691ba687ad182bD12cb4a91D533ae', _FTSOManager);
 var ClaimSetupManager = (_ClaimSetupManager = {}, _ClaimSetupManager[exports.ChainId.COSTON2] = '0x5Ddb590530EF66775E6225671eaBD94959e9AE0e', _ClaimSetupManager[exports.ChainId.FLARE] = '0xD56c0Ea37B848939B59e6F5Cda119b3fA473b5eB', _ClaimSetupManager[exports.ChainId.SONGBIRD] = '0xDD138B38d87b0F95F6c3e13e78FFDF2588F1732d', _ClaimSetupManager);
 var DistributionToDelegators = (_DistributionToDelega = {}, _DistributionToDelega[exports.ChainId.COSTON2] = '0xbd33bDFf04C357F7FC019E72D0504C24CF4Aa010', _DistributionToDelega[exports.ChainId.FLARE] = '0x9c7A4C83842B29bB4A082b0E689CB9474BD938d0', _DistributionToDelega);
+var FTSORegistry = (_FTSORegistry = {}, _FTSORegistry[exports.ChainId.COSTON2] = '0x48da21ce34966a64e267cefb78012c0282d0ac87', _FTSORegistry[exports.ChainId.FLARE] = '0x13DC2b5053857AE17a4f95aFF55530b267F3E040', _FTSORegistry[exports.ChainId.SONGBIRD] = '0xef4c203470553c654b3870f37ce4de1fa862dee0', _FTSORegistry);
 var INIT_CODE_HASH = (_INIT_CODE_HASH = {}, _INIT_CODE_HASH[exports.ChainId.COSTON2] = "0x9ab0528ffb791f82db46a3030d2a10df4ee42ffba6900ae9ca57152640d91384", _INIT_CODE_HASH);
 /**
  * The oldest V0 governance address
@@ -1071,6 +1072,7 @@ exports.DistributionToDelegators = DistributionToDelegators;
 exports.ENS_REGISTRAR_ADDRESSES = ENS_REGISTRAR_ADDRESSES;
 exports.Ether = Ether;
 exports.FTSOManager = FTSOManager;
+exports.FTSORegistry = FTSORegistry;
 exports.FTSORewardManager = FTSORewardManager;
 exports.Fraction = Fraction;
 exports.GOVERNANCE_ALPHA_V0_ADDRESSES = GOVERNANCE_ALPHA_V0_ADDRESSES;

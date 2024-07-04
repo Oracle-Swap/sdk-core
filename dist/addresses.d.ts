@@ -38,6 +38,7 @@ export declare const FTSORewardManager: AddressMap;
 export declare const FTSOManager: AddressMap;
 export declare const ClaimSetupManager: AddressMap;
 export declare const DistributionToDelegators: AddressMap;
+export declare const FTSORegistry: AddressMap;
 export declare const INIT_CODE_HASH: AddressMap;
 /**
  * The oldest V0 governance address
