@@ -317,6 +317,12 @@ export const DistributionToDelegators: AddressMap = {
   [ChainId.FLARE]: '0x9c7A4C83842B29bB4A082b0E689CB9474BD938d0',
 }
 
+export const FTSORegistry: AddressMap = {
+  [ChainId.COSTON2]: '0x48da21ce34966a64e267cefb78012c0282d0ac87',
+  [ChainId.FLARE]: '0x13DC2b5053857AE17a4f95aFF55530b267F3E040',
+  [ChainId.SONGBIRD]: '0xef4c203470553c654b3870f37ce4de1fa862dee0',
+}
+
 export const INIT_CODE_HASH: AddressMap = {
   [ChainId.COSTON2]: "0x9ab0528ffb791f82db46a3030d2a10df4ee42ffba6900ae9ca57152640d91384"
 }
