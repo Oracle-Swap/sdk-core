@@ -16,12 +16,12 @@ export declare const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = "0x8B799381ac40b838BBA4
 /**
  * @deprecated use V2_FACTORY_ADDRESSES instead
  */
-export declare const V2_FACTORY_ADDRESS = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f";
+export declare const V2_FACTORY_ADDRESS = "0x06B7a5aed878f639273d0e89fed525F26Ce59879";
 export declare const V2_FACTORY_ADDRESSES: AddressMap;
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
  */
-export declare const V2_ROUTER_ADDRESS = "0xe551A850133Ae4bCbF069927940296c1428A7194";
+export declare const V2_ROUTER_ADDRESS = "0xB2a25D010fE4b7f37066432F19a4AA8d29951EC8";
 export declare const V2_ROUTER_ADDRESSES: AddressMap;
 export declare const PERMIT2_ADDRESS = "0x3CE3deF8d48d0D620061e5F0330a742B28B5945e";
 export declare const PERMIT2_ADDRESS_MAP: AddressMap;
@@ -40,6 +40,7 @@ export declare const ClaimSetupManager: AddressMap;
 export declare const DistributionToDelegators: AddressMap;
 export declare const FTSORegistry: AddressMap;
 export declare const INIT_CODE_HASH: AddressMap;
+export declare const MULTICALL2_ADDRESS: AddressMap;
 /**
  * The oldest V0 governance address
  */
