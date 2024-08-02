@@ -29,16 +29,16 @@ export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26
 /**
  * @deprecated use V2_FACTORY_ADDRESSES instead
  */
-export const V2_FACTORY_ADDRESS = '0x06B7a5aed878f639273d0e89fed525F26Ce59879'
+export const V2_FACTORY_ADDRESS = '0xdB9e9AAE74974AE32af7BE2941d3294086212640'
 export const V2_FACTORY_ADDRESSES: AddressMap = {
-  [ChainId.COSTON2]: '0x06B7a5aed878f639273d0e89fed525F26Ce59879'
+  [ChainId.COSTON2]: '0xdB9e9AAE74974AE32af7BE2941d3294086212640'
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
  */
-export const V2_ROUTER_ADDRESS = '0xB2a25D010fE4b7f37066432F19a4AA8d29951EC8'
+export const V2_ROUTER_ADDRESS = '0xAE70Dcba4F22330CD5B3E37d119BCDeB7788B56f'
 export const V2_ROUTER_ADDRESSES: AddressMap = {
-  [ChainId.COSTON2]: '0xB2a25D010fE4b7f37066432F19a4AA8d29951EC8'
+  [ChainId.COSTON2]: '0xAE70Dcba4F22330CD5B3E37d119BCDeB7788B56f'
 }
 
 const COSTON2_ADDRESSES: ChainAddresses = {
@@ -283,15 +283,15 @@ export const MULTICALL_ADDRESSES: AddressMap = {
 }
 
 export const OracleSwapVoter: AddressMap = {
-  [ChainId.COSTON2]: '0x85Fc3Aa730Df4AFb98c2f8705704452B90D112F4',
+  [ChainId.COSTON2]: '0xdC1C05d1658F605bCb05A86e9F137D1F98a963eb',
 }
 
 export const OSLPManager: AddressMap = {
-  [ChainId.COSTON2]: '0xf2E3BEAE2C9DF795454510010BF3597453AFbf68',
+  [ChainId.COSTON2]: '0xF77d1688CFB676d1D2ED54A7c175af4fCECe7FE8',
 }
 
 export const SuperfarmMultiRewardManager: AddressMap = {
-  [ChainId.COSTON2]: '0x3f2adA4Ee22d60CbaA7AbaB8Ac4c61c25ef31485',
+  [ChainId.COSTON2]: '0xbdaCf675D65A5A63ea39cdca89Ce93a818498FCD',
 }
 
 export const FTSORewardManager: AddressMap = {
@@ -317,9 +317,20 @@ export const DistributionToDelegators: AddressMap = {
   [ChainId.FLARE]: '0x9c7A4C83842B29bB4A082b0E689CB9474BD938d0',
 }
 
+export const FTSORegistry: AddressMap = {
+  [ChainId.COSTON2]: '0x48da21ce34966a64e267cefb78012c0282d0ac87',
+  [ChainId.FLARE]: '0x13DC2b5053857AE17a4f95aFF55530b267F3E040',
+  [ChainId.SONGBIRD]: '0xef4c203470553c654b3870f37ce4de1fa862dee0',
+}
+
+export const OSLPVP: AddressMap = {
+  [ChainId.COSTON2]: '0x6d11795E518C9580703d32c49aA7184530F55188',
+}
+
 export const INIT_CODE_HASH: AddressMap = {
   [ChainId.COSTON2]: "0xae199cf6bedaa27fee9ef8928dd16925c3846fbe0532e42bbdee6de014e9bef9"
 }
+
 
 /**
  * The oldest V0 governance address
@@ -336,11 +347,11 @@ export const GOVERNANCE_ALPHA_V1_ADDRESSES: AddressMap = {
  * The latest governor bravo that is currently admin of timelock
  */
 export const GOVERNANCE_BRAVO_ADDRESSES: AddressMap = {
-  [ChainId.COSTON2]: '0xCCf16d8F755e7e2f09670eb88F3e3ae1ab787fDB',
+  [ChainId.COSTON2]: '0x7735864B24693dC9e3e939dC9f05cb5715a66EDb',
 }
 
 export const TIMELOCK_ADDRESSES: AddressMap = {
-  [ChainId.COSTON2]: '0xCFC76Aa3af550D99d486701b22288237b2B8F043',
+  [ChainId.COSTON2]: '0x889993211FAf5Aa0FA0366b5878F9785b3Bba029',
 }
 
 export const QUOTER_ADDRESSES: AddressMap = {
